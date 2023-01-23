@@ -9,6 +9,7 @@ find_package(Eigen3 REQUIRED)
 find_package(Boost REQUIRED)
 
 # Environment variables
+set(CMAKE_INSTALL_PREFIX "/usr" CACHE STRING " " FORCE )
 
 set(CMAKE_BUILD_RPATH "$ORIGIN")
 
@@ -74,6 +75,8 @@ add_library(${MATIO_BACKEND_NAME} SHARED src/matio_backend.cpp)
 # Linking targets
 
 target_link_libraries(${LIBRARY_TARGET_NAME} PRIVATE dl -pthread)
+
+
 
 target_link_libraries(${MATIO_BACKEND_NAME}
     PUBLIC
