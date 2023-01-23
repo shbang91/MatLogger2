@@ -2,3 +2,8 @@
 *.orig
 build/
 docs/html/
+CMakeFiles/
+.gitignore
+.vscode/
+
+tags
